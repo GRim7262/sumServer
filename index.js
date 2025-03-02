@@ -8,7 +8,7 @@ const todos = [{
     id: 1,
     title: "Todo 1",
     description: "This is todo 1",
-    completed: false,
+    completed: true,
 }, {
     id: 2,
     title: "Todo 2",
@@ -18,7 +18,7 @@ const todos = [{
     id: 3,
     title: "Todo 3",
     description: "This is todo 3",
-    completed: false,
+    completed: true,
 
 }, {
     id: 4,
@@ -30,7 +30,7 @@ const todos = [{
     id: 5,
     title: "Todo 5",
     description: "This is todo 5",
-    completed: false,
+    completed: true,
 }]
 
 app.get("/todo", (req, res) => {
