@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;  
 app.use(cors());
 
 const todos = [{
@@ -32,6 +32,12 @@ const todos = [{
     description: "This is todo 5",
     completed: true,
 }]
+
+app.get("/alltodos", (req, res) => {
+    res.json({
+        todos
+    })
+})
 
 app.get("/todo", (req, res) => {
     const todo = todos.find(t => t.id == req.query.id);
